@@ -1,4 +1,4 @@
-package com.visoth.businesslogin.Config;
+package com.visoth.businesslogin.Security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

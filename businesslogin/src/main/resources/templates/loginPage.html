@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
 </head>
 <body>
+    <div class="container mt-5 " style="width: 400px;margin: auto;">
     <h1>Login page</h1>
+        <br>
     <form th:action="@{/authenticateTheUser}" method="post">
-        <label for="username">Username</label>:
-        <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
-        <label for="password">Password</label>:
-        <input type="password" id="password" name="password" /> <br />
-        <input type="submit" value="Log in" />
-    </form>
+        <div th:if="${param.error}" class="text-danger">
+            Invalid username or password.
+        </div>
+        <div class="mb-3">
+            <input placeholder="Email" type="email" class="form-control" id="email" aria-describedby="emailHelp" name="username" >
 
+        </div>
+        <div class="mb-3">
+            <input placeholder="Password" type="password" class="form-control" id="passwordId" name="password">
+            <a th:href="@{/forgotPassword}" id="emailHelp" class="form-text" style="text-decoration: none;">Forgot password?</a>
+        </div>
+        <div class="text-center">
+        <button type="submit" class="btn btn-primary"><strong>Submit</strong></button>
+        <br>
+        <a th:href="@{/register/show}" id="register" class="form-text" style="text-decoration: none;">Need an account? Register here</a>
+        </div>
+    </form>
+    </div>
 </body>
 </html>
