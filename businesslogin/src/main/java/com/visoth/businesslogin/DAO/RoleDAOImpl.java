@@ -25,6 +25,7 @@ public class RoleDAOImpl implements CustomRoleDAO{
         Role role=null;
         try{
             role=query.getSingleResult();
+
         }catch (Exception e){
             role=null;
         }

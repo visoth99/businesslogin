@@ -10,8 +10,8 @@
 <body>
 <div class="container mt-5 " style="width: 400px;margin: auto;">
     <h1>Register Page</h1>
-        <p th:if="${registerError}" th:text="${registerError}" class="text-danger"></p>
     <br>
+        <p th:if="${registerError}" th:text="${registerError}" class="text-danger"></p>
     <form action="#" th:action="@{/register/process}" th:object="${validateUser}" method="post">
         <div class="mb-3">
             <input placeholder="First Name" type="text" class="form-control" th:field="*{firstName}" >
@@ -27,15 +27,22 @@
         </div>
         <div class="mb-3">
             <input placeholder="Password" type="password" class="form-control" th:field="*{password}">
+                <small class="form-text text-muted">
+                    -length between 8 and 16 characters<br>
+                    -at least one lower-case character and upper-case character<br>
+                    -at least one digit character one symbol<br>
+                    -not allow: whitespace, e.g. 12345, e.g. abcdef<br>
+                </small>
             <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="text-danger"></p>
         </div>
-        <div class="mb-3">
-            <input placeholder="Confirm Password" type="password" class="form-control" th:field="*{confirmPassword}">
+        <div class="mb-3 block">
+            <input placeholder="Confirm Password" type="password" class="form-control" th:field="*{confirmPassword}" th:errorclass="fieldError">
             <p th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}" class="text-danger"></p>
         </div>
         <button type="submit" class="btn btn-primary"><strong>Submit</strong></button>
-
+        <a th:href="@{/}" id="register" class="form-text" style="text-decoration: none;">&nbsp;&nbsp;Go back to Login Page</a>
     </form>
 </div>
+
 </body>
 </html>

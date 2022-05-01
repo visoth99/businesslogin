@@ -71,7 +71,7 @@ public class UserServiceImpl implements UserService{
         user.setLastName(validateUser.getLastName());
         user.setEmail(validateUser.getEmail());
 
-        user.setRoles(Arrays.asList(roleDAO.findRoleByName("OFFICER")));
+        user.setRoles(Arrays.asList(roleDAO.findRoleByName("ROLE_OFFICER")));
         userDAO.save(user);
 
     }

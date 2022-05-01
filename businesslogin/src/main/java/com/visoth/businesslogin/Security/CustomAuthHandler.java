@@ -21,6 +21,7 @@ public class CustomAuthHandler implements AuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                                         Authentication authentication) throws IOException, ServletException {
+
         User user=userService.findUsername(authentication.getName());
         HttpSession session=request.getSession();
         session.setAttribute("user",user);
