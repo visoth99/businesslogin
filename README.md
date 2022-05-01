@@ -4,7 +4,7 @@ A business login web page with the register account as  well.
 This is a practice project that using the Java language with spring boot framework.  If you are interested, you can clone the project, and find out by yourself 
 how I can implement the business login web page by using Java.
 
-reach me out on Discord, usernameId:Cc#2129
+reach me out on Discord, usernameId: Cc#2129
 
 ## Note
 This is not a Jar file or open-source, and It is a Maven project.
