@@ -1,7 +1,7 @@
 package com.visoth.businesslogin.DAO;
 
 import com.visoth.businesslogin.Entity.User;
-import com.visoth.businesslogin.Validate.ValidateUser;
+
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;

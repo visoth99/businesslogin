@@ -2,6 +2,10 @@ package com.visoth.businesslogin.Validate;
 
 import javax.validation.constraints.NotEmpty;
 
+
+@CustomPasswordAnnotation.List({
+        @CustomPasswordAnnotation(first="password",second = "confirmPassword",message = "The password fields must match")
+})
 public class ValidateUser {
 
     @NotEmpty()
@@ -10,9 +14,11 @@ public class ValidateUser {
     @NotEmpty()
     private String lastName;
 
+    @ValidateEmailAnnotation
     @NotEmpty()
     private String email;
 
+    @ValidPasswordStrength
     @NotEmpty()
     private String password;
 

@@ -35,13 +35,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/forgotPassword","/register/show","/register/process").permitAll()
+                .antMatchers("/").hasRole("OFFICER")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/loginPage")
                 .loginProcessingUrl("/authenticateTheUser")
                 .successHandler(customAuthHandler)
-                .permitAll();
+                .permitAll()
+                .and()
+                .logout().permitAll()
+                .and()
+                .exceptionHandling().accessDeniedPage("/AccessDenied");
+
     }
 
     @Bean

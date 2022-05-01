@@ -14,7 +14,7 @@ CREATE TABLE `role`(
     name varchar(64) DEFAULT NULL,
     PRIMARY KEY (id)
 );
-INSERT INTO `role` (name) VALUES ('OFFICER'),('CUSTOMER');
+
 DROP TABLE IF EXISTS `users_roles`;
 CREATE TABLE `users_roles`(
     user_id int(11) NOT NULL,

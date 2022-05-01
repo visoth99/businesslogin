@@ -46,12 +46,12 @@ public class Register {
         User exist=userService.findUsername(user);
         if(exist !=null){
             model.addAttribute("validateUser",new ValidateUser());
-            model.addAttribute("registerError","Username is not available");
+            model.addAttribute("registerError","Email is already in use");
             logger.warning("Username is not available");
             return "register";
         }
         userService.save(validateUser);
         logger.info("Success"+user);
-        return "index";
+        return "confirm";
     }
 }
