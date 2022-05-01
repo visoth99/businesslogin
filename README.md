@@ -7,8 +7,7 @@ how I can implement the business login web page by using Java.
 reach me out on Discord, usernameId:Cc#2129
 
 ## Note
-This is not a Jar file or open-source
-It is a Maven project
+This is not a Jar file or open-source, and It is a Maven project.
 
 ## Dependencies 
 * Spring framework (for back-end, using Java web development framework)
