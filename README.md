@@ -37,7 +37,7 @@ This is not a Jar file or open-source, and It is a Maven project.
 ![10](https://user-images.githubusercontent.com/73359451/166170757-83dcca10-0fcd-4efa-bf1f-f44e92a63dd2.jpg)
 ## Confirmation Page
 ![7](https://user-images.githubusercontent.com/73359451/166170785-7669cb0c-9bca-4d3c-a3bc-bf5b27a0735b.jpg)
-## User Main Page
+## User Profile Page
 ![8](https://user-images.githubusercontent.com/73359451/166170799-92d38f00-974b-47bb-91e4-53f9f88c6df3.jpg)
 ## Logout Page
 ![9](https://user-images.githubusercontent.com/73359451/166170816-a474173c-cf53-4325-ba06-9cb8f733ad6c.jpg)
